@@ -56,12 +56,12 @@ img {
     width: 50%;
 }
 h2 {
-    color: white;
+    color: black;
     padding-left: 30px;
     margin-bottom: 5px;
     display: flex;
     align-items: center;
-    background-color:blue;
+    background-color:#FED943;
     border-radius: 0 20px 0 0;
 }
 .list li a:visited {
