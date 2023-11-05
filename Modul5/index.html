@@ -6,38 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modul5</title>
 </head>
-<link rel="stylesheet" href="Assets/style.css" />
-
+<link rel="stylesheet" href="../Modul5/Assets/css/style.css" />
 <body>
-    <div class="header">Belajar Layout CSS</div>
-    <div class="card">
-        <img src="../Modul5/Assets/image/LogoPolibang.png" alt="logo" width="100px">
-        <div class="list">
-            <ul>
-                <hr>
-                <li><a href="#">Fadly</a></li>
-                <hr>
-                <li><a href="#">Zidhan</a></li>
-                <hr>
-                <li><a href="#">Anam</a></li>
-                <hr>
-                <li><a href="#">Tama</a></li>
-                <hr
-            </ul>
-        </div>
+    <div class="container">
+        <nav class="kiri">
+            <img id="polibang" src="../Modul5/Assets/image/LogoPolibang.png" alt="logo" width="100px">
+                <ul class="list"><h2>Nama Teman:</h2>
+                    <li><a href="../Modul5/Assets/html/mahasiswa1.html" target="content">Fadly</a></li>
+                    <li><a href="../Modul5/Assets/html/mahasiswa2.html" target="content">Zidhan</a></li>
+                    <li><a href="../Modul5/Assets/html/mahasiswa3.html" target="content">Anam</a></li>
+                    <li><a href="../Modul5/Assets/html/mahasiswa4.html" target="content">Tama</a></li>
+                </ul>
+        </nav>
+        <div class="clear"></div>
+        <div class="kanan">
+            <header class="header">
+                <h1>Belajar Layout Website</h1>
+                <h3>Menggunakan HTML dan CSS</h3>
+            </header>
+            <nav class="navigation">
+                <li><a href="../Modul5/Assets/html/home.html" target="content">HOME</a></li>
+                <li><a href="../Modul5/Assets/html/visi.html" target="content">VISI & MISI</a></li>
+                <li><a href="#">INFORMASI</a></li>
+                <li><a href="#">FORM</a></li>
+                <li><a href="#">DOSEN</a></li>
+                <li><a href="#">KONTAK</a></li>
+                <li><a href="#">GALLERY</a></li>
+            </nav>
+            <div class="content">
+                <iframe src="Assets/html/home.html" name="content" frameborder="" width="100%" height="720px"></iframe>
+            </div>
+        </div> 
     </div>
-
-    <div class="navigation">
-        <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">VISI & MISI</a></li>
-        <li><a href="#">INFORMASI</a></li>
-        <li><a href="#">FORM</a></li>
-        <li><a href="#">DOSEN</a></li>
-        <li><a href="#">KONTAK</a></li>
-        <li><a href="#">GALLERY</a></li>
-        </ul>
-    </div>
+    <footer>
+        &copy;Copyright 2023, All Right Reserved.<br>Rekayasa Perangkat Lunak Politeknik Balekambang Jepara.
+    </footer>
 </body>
 
 </html>
