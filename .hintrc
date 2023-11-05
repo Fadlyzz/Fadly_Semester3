@@ -16,6 +16,12 @@
         "listitem": "off",
         "list": "off"
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
     ]
   }
 }
