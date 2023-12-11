@@ -3,77 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modul7</title>
+    <title>Modul5</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-    <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        display: block;
-        align-items: center;
-        justify-content: center;
-      }
-      h1 {
-        text-align: center;
-      }
-      .col {
-        background-color: aqua;
-        padding: 50px;
-        border-radius: 20px 80px;
-      }
-    </style>
   </head>
-  <body class="d-flex justify-content-center align-items-center">
-    <div class="container-xs">
-      <div class="row">
-        <form class="col">
-          <h1>Form Pendaftaran</h1>
-          <div class="mb-3">
-            <label for="name" class="form-label">Nama</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              name="name"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="email"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Kata Sandi</label>
-            <input
-              type="password"
-              class="form-control"
-              id="password"
-              name="password"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="confirm-password" class="form-label"
-              >Konfirmasi Kata Sandi</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="confirm-password"
-              name="confirm-password"
-              required
-            />
-          </div>
-          <button class="btn btn-primary" type="submit">Daftar</button>
-        </form>
+  <body>
+    <div class="container">
+      <div class="p-5 bg-primary text-white text-center">
+        <h1 class="display-4">Politeknik Balekambang Jepara</h1>
+        <p class="lead">Excellent and Character Buildings</p>
       </div>
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Modul5/Assets/html/home.html"
+                target="content"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Modul5/Assets/html/visi.html"
+                target="content"
+                >VISI & MISI</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Modul5/Assets/html/informasi.html"
+                target="content"
+                >INFORMASI</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Modul7/form.html" target="content"
+                >FORM</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Modul5/Assets/html/dosen.html"
+                target="content"
+                >DOSEN</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Modul5/Assets/html/kontak.html"
+                target="content"
+                >KONTAK</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Modul5/Assets/html/galeri.html"
+                target="content"
+                >GALERI</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="content mt-3">
+        <iframe
+          src="../Modul5/Assets/html/home.html"
+          name="content"
+          class="border-0 w-100"
+          height="600px"
+        ></iframe>
+      </div>
+
+      <footer class="mt-5 p-4 bg-dark text-white text-center">
+        &copy; Copyright 2023 - Fadlyzz, All Right Reserved.<br />
+        Rekayasa Perangkat Lunak Politeknik Balekambang Jepara.
+      </footer>
     </div>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
