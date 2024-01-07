@@ -102,11 +102,10 @@ include "../header.php";
                 <div class="form-group">
                     <button type="submit" name="update" class="btn btn-primary mt-2">Update</button>
                 </div>
-
-                <!-- a BACK button to go to the home page -->
-                <div class="container text-center mt-5">
-                    <a href="home.php" class="btn btn-warning mt-5"> Back </a>
-                </div>
+            </div>
+            <!-- a BACK button to go to the home page -->
+            <div class="container text-center mt-5">
+                <a href="home.php" class="btn btn-warning mt-5"> Back </a>
             </div>
         </div>
     </form>

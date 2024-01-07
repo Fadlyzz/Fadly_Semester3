@@ -3,6 +3,20 @@
 <?php
 if (isset($_GET['delete'])) {
     $surveiid = $_GET['delete'];
+
+    // Set sesi untuk menandai bahwa popup harus ditampilkan
+    $_SESSION['show_delete_modal'] = true;
+    
+    // Redirect kembali ke home.php
+    header("Location: home.php");
+    exit();
+}
+
+// Cek apakah sesi menandakan bahwa popup harus ditampilkan
+if (isset($_SESSION['show_delete_modal']) && $_SESSION['show_delete_modal']) {
+    unset($_SESSION['show_delete_modal']); // Hapus sesi setelah digunakan
+
+    // Tampilkan popup modal
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
@@ -23,24 +37,34 @@ if (isset($_GET['delete'])) {
     </div>
 </div>
 
-<!-- Scripts -->
+<!-- Sesuaikan skrip jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <script>
     $(document).ready(function () {
-        $('#deleteModal').modal('show');
-        
-        // Tambahkan skrip ini untuk mengarahkan kembali ke home.php saat tombol Cancel ditekan
-        $('#deleteModal').on('hidden.bs.modal', function () {
-            window.location.href = 'home.php';
+        $('.delete-btn').on('click', function (e) {
+            e.preventDefault(); // Mencegah peristiwa default tautan
+
+            var id = $(this).data('id');
+            $('#deleteModal').modal('show');
+
+            $('#deleteButton').on('click', function () {
+                window.location.href = 'delete.php?delete=' + id;
+            });
         });
     });
 </script>
 
+
+
+
+
 <?php
     exit(); // Pastikan untuk keluar dari script setelah menampilkan modal
 }
-?>
 
-<?php include "footer.php"; ?>
+// Sisipkan footer.php setelah mengecek dan menampilkan modal
+include "footer.php";
+?>
