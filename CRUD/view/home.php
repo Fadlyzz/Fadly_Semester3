@@ -6,7 +6,7 @@ include "../header.php";
 
 <div class="container mt-4" class="p-3 mb-2 bg-transparent text-dark">
     <h1 class="text-center">DATA SURVEI</h1>
-    <a href="create.php" class="btn btn-outline-dark mb-2 mt-5"><i class="bi bi-person-plus"></i>Create New Survei</a>
+    <a href="create.php" class="btn btn-outline-dark mb-2 mt-5"><i class="bi bi-person-plus"></i>Buat Survei Baru</a>
 
     <table class="table table-striped table-bordered border-warning table-hover">
         <thead class="table-warning">
