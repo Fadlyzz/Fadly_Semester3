@@ -69,7 +69,7 @@ include "../header.php";
 ?>
 
     <div class="container mt-4">
-    <h1 class="text-center">EDIT SURVEI</h1>
+    <h1 class="text-center">UPDATE SURVEI</h1>
     <!-- Form to display existing data and allow editing -->
     <form action="" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="survei_id" value="<?php echo $row['id']; ?>">
