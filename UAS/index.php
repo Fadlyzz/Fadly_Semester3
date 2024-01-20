@@ -1,53 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ME STORE</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="my-4">Penjualan Handphone</h1>
-
-      <div class="row">
-        <div class="col-md-6">
-          <h2>Smartphone 1</h2>
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Smartphone 1"
-            class="img-thumbnail"
-          />
-          <p>
-            Harga: Rp.
-            <?php echo number_format(1000000, 0, ',', '.'); ?>
-          </p>
-          <button class="btn btn-primary">Beli</button>
-        </div>
-        <div class="col-md-6">
-          <h2>Smartphone 2</h2>
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Smartphone 2"
-            class="img-thumbnail"
-          />
-          <p>
-            Harga: Rp.
-            <?php echo number_format(2000000, 0, ',', '.'); ?>
-          </p>
-          <button class="btn btn-primary">Beli</button>
-        </div>
-      </div>
+<?php include_once("inc_header.php") ?>
+<!-- untuk home -->
+<section id="home">
+    <img src="<?php echo ambil_gambar('1') ?>" />
+    <div class="kolom">
+        <p class="deskripsi"><?php echo ambil_kutipan('1') ?></p>
+        <h2><?php echo ambil_judul('1') ?></h2>
+        <?php echo maximum_kata(ambil_isi('1'), 30) ?>
+        <p><a href="<?php echo buat_link_halaman('1') ?>" class="tbl-pink">Pelajari Lebih Lanjut</a></p>
     </div>
-  </body>
-</html>
+</section>
+
+<!-- untuk courses -->
+<section id="courses">
+    <div class="kolom">
+        <p class="deskripsi"><?php echo ambil_kutipan('2') ?></p>
+        <h2><?php echo ambil_judul('2') ?></h2>
+        <?php echo maximum_kata(ambil_isi('2'), 30) ?>
+        <p><a href="<?php echo buat_link_halaman('2') ?>" class="tbl-biru">Pelajari Lebih Lanjut</a></p>
+    </div>
+    <img src="<?php echo ambil_gambar('2') ?>" />
+</section>
+
+<!-- untuk tutors -->
+<section id="tutors">
+    <div class="tengah">
+        <div class="kolom">
+            <p class="deskripsi">Our Top Tutors</p>
+            <h2>Tutors</h2>
+            <p>Our Programmers</p>
+        </div>
+
+        <div class="tutor-list">
+            <?php
+            $sql1       = "select * from tutors order by id asc";
+            $q1         = mysqli_query($koneksi, $sql1);
+            while ($r1 = mysqli_fetch_array($q1)) {
+            ?>
+                <div class="kartu-tutor">
+                    <a href="<?php echo buat_link_tutors($r1['id']) ?>">
+                        <img src="<?php echo url_dasar() . "/gambar/" . tutors_foto($r1['id']) ?>" />
+                        <p><?php echo $r1['nama'] ?></p>
+                    </a>
+                </div>
+            <?php
+            }
+            ?>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- untuk partners -->
+<section id="partners">
+    <div class="tengah">
+        <div class="kolom">
+            <p class="deskripsi">Our Top Partners</p>
+            <h2>Partners</h2>
+            <p>Our Partners</p>
+        </div>
+
+        <div class="partner-list">
+            <?php
+            $sql1   = "select * from partners order by id asc";
+            $q1     = mysqli_query($koneksi, $sql1);
+            while ($r1 = mysqli_fetch_assoc($q1)) {
+            ?>
+                <div class="kartu-partner">
+                    <a href="<?php echo buat_link_partners($r1['id'])?>">
+                    <img src="<?php echo url_dasar()."/gambar/".partners_foto($r1['id'])?>"/>
+                    </a>
+                </div>
+            <?php
+            }
+            ?>
+
+
+        </div>
+    </div>
+</section>
+<?php include_once("inc_footer.php") ?>
